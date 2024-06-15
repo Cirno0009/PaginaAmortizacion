@@ -1,0 +1,57 @@
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package: otrosapps/configuracion/menu/menu_opciones.dart';
+class AnchoMenu extends StatefulWidget {
+    const AnchoMenu({super.key});
+
+    @override
+    State<AnchoMenu> createState() => _AnchoMenuState();
+}
+
+class _AnchoMenuState extends State<AnchoMenu> {
+    int indiceNavegacion=1;
+    @override
+    Widget build(BuildContext context) {
+        final espacioSup=MediaQuery.of(context).viewPadding.top>35;
+
+        return NavigationDrawer(
+            selectedIndex: indiceNavegacion
+            onDestinationSelected: (value) {
+                setState((){
+                    indiceNavegacion=value;
+                });
+            //navegacion a opciones
+            final opcionMenu=appMenuOpciones[value];
+            context.push(opcionMenu.link);
+            },
+            children: [
+                Padding(
+                    padding:EdgeInsets.fromLTRB(28, espacioSup ? 0:20, 16,10),
+                ),
+            //opciones de la lista
+            ...appMenuOpciones
+            .sublist(0,3)
+            .map((opcion) => NavigationDrawerDestination(
+                icon: Icon(opcion.icono),
+                label: Text(opcion.titulo),
+            ),
+            //linea de division
+            const Padding(
+                padding:EdgeInsets.fromLTRB(28,16,16.10),
+                child: Divider(),
+            ),
+            const Padding(
+                padding:EdgeInsets.fromLTRB(28,16,16.10),
+                child: Text('Mas Opciones'),
+                ),
+            //opciones de lista
+            ...appMenuOpciones
+            .sublist(3)
+            .map((opcion) => NavigationDrawerDestination(
+                icon: Icon(opcion.icono),
+                label: Text(opcion.titulo),
+            ),    
+        ),
+            ]);
+    }
+}

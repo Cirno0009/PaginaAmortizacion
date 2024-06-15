@@ -1,0 +1,118 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: linear-gradient(to bottom, #007bff, #ffffff); /* Blue to white gradient */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Added font-family */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.column {
+    flex: 1;
+    margin: 10px;
+}
+
+/* Estilos para los títulos */
+.title {
+    margin: 5px 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Added font-family */
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Added font-family */
+}
+
+h2 {
+    font-size: 18px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Added font-family */
+}
+
+/* Estilos para el formulario */
+.form-group {
+    margin-top: 20px;
+}
+
+.amortization-formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Added font-family */
+}
+
+label {
+    font-weight: bold;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Added font-family */
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Added font-family */
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Added font-family */
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Added font-family */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para los resultados */
+#results {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Added font-family */
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
